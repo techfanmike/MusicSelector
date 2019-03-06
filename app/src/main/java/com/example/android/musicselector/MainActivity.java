@@ -1,9 +1,14 @@
 package com.example.android.musicselector;
 
+import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -29,22 +34,23 @@ public class MainActivity extends AppCompatActivity {
 
     // Create entries into the list of available music
     private void populateArray() {
-        mMusicEntryList.add(new MusicListEntry("Rush", "Exit...Stage Left", "YYZ"));
-        mMusicEntryList.add(new MusicListEntry("Rush", "Exit...Stage Left", "Red Barchetta"));
-        mMusicEntryList.add(new MusicListEntry("Rush", "Exit...Stage Left", "Jacob's Ladder"));
-        mMusicEntryList.add(new MusicListEntry("Rush", "Exit...Stage Left", "The Trees"));
-        mMusicEntryList.add(new MusicListEntry("Rush", "Test for Echo", "Test for Echo"));
-        mMusicEntryList.add(new MusicListEntry("Rush", "Test for Echo", "Driven"));
-        mMusicEntryList.add(new MusicListEntry("Rush", "Test for Echo", "Half the World"));
-        mMusicEntryList.add(new MusicListEntry("Rush", "Test for Echo", "Resist"));
-        mMusicEntryList.add(new MusicListEntry("U2", "Joshua Tree", "Where the Streets Have No Name"));
-        mMusicEntryList.add(new MusicListEntry("U2", "Joshua Tree", "I Still Haven't Found What I'm Looking For"));
-        mMusicEntryList.add(new MusicListEntry("U2", "Joshua Tree", "With or Without You"));
-        mMusicEntryList.add(new MusicListEntry("U2", "Joshua Tree", "In God's Country"));
-        mMusicEntryList.add(new MusicListEntry("U2", "Joshua Tree", "Exit"));
-        mMusicEntryList.add(new MusicListEntry("U2", "Achtung Baby", "Zoo Station"));
-        mMusicEntryList.add(new MusicListEntry("U2", "Achtung Baby", "Even Better Than the Real Thing"));
-        mMusicEntryList.add(new MusicListEntry("U2", "Achtung Baby", "One"));
-        mMusicEntryList.add(new MusicListEntry("U2", "Achtung Baby", "Until the End of the World"));
+        try {
+            // get the handle for the file in the 'raw' folder
+            Resources resource = getResources();
+            InputStream is = resource.openRawResource(R.raw.music);
+            InputStreamReader isr = new InputStreamReader(is);
+            BufferedReader reader = new BufferedReader(isr);
+            String line;
+
+            // read a line until done when null returned
+            while ((line = reader.readLine()) != null) {
+
+                // split string and add entry to entry list UI object
+                String[] splitString = line.split(",");
+                mMusicEntryList.add(new MusicListEntry(splitString[0], splitString[1], splitString[2]));
+            }
+        } catch (IOException e) {
+            ;
+        }
     }
 }
