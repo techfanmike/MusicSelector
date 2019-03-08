@@ -29,9 +29,6 @@ public class MusicListEntryAdapter extends ArrayAdapter<MusicListEntry> {
         int resourceID = getContext().getResources().getIdentifier(entry.getAlbumArt() , "mipmap",
                 getContext().getPackageName());
 
-        //ImageView albumArt = findViewById(resourceID);
-        //albumArt.setImageResource(resourceID);
-
         // bind variables to UI objects to set the UI values
         TextView artist = convertView.findViewById(R.id.artistName);
         TextView album = convertView.findViewById(R.id.albumName);
