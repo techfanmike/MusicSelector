@@ -1,32 +1,32 @@
-Rush, Exit...Stage Left, The Spirit of Radio
-Rush, Exit...Stage Left, YYZ
-Rush, Exit...Stage Left, Red Barchetta
-Rush, Exit...Stage Left, Jacob's Ladder
-Rush, Exit...Stage Left, The Trees
-Rush, Exit...Stage Left, A Passage to Bangkok
-Rush, Exit...Stage Left, Broon's Bane
-Rush, Exit...Stage Left, Xanadu
-Rush, Exit...Stage Left, Free Will
-Rush, Exit...Stage Left, Tom Sawyer
-Rush, Test for Echo, Test for Echo
-Rush, Test for Echo, Driven
-Rush, Test for Echo, Half the World
-Rush, Test for Echo, Resist
-Rush, Test for Echo, The Color of Right
-Rush, Test for Echo, Time and Motion
-Rush, Test for Echo, Totem
-Rush, Test for Echo, Dog Years
-U2, The Joshua Tree, Where the Streets Have No Name
-U2, The Joshua Tree, I Still Haven't Found What I'm Looking For
-U2, The Joshua Tree, With or Without You
-U2, The Joshua Tree, Bullet the Blue Sky
-U2, The Joshua Tree, In God's Country
-U2, The Joshua Tree, Exit
-U2, Under a Blood Red Sky, Gloria
-U2, Under a Blood Red Sky, 11 O'Clock Tick Tock
-U2, Under a Blood Red Sky, I Will Follow
-U2, Under a Blood Red Sky, Party Girl
-U2, Under a Blood Red Sky, Sunday Bloody Sunday
-U2, Under a Blood Red Sky, The Electric Co.
-U2, Under a Blood Red Sky, New Year's Day
-U2, Under a Blood Red Sky, 40
+Rush, Exit...Stage Left, The Spirit of Radio, rush_esl
+Rush, Exit...Stage Left, YYZ, rush_esl
+Rush, Exit...Stage Left, Red Barchetta, rush_esl
+Rush, Exit...Stage Left, Jacob's Ladder, rush_esl
+Rush, Exit...Stage Left, The Trees, rush_esl
+Rush, Exit...Stage Left, A Passage to Bangkok, rush_esl
+Rush, Exit...Stage Left, Broon's Bane, rush_esl
+Rush, Exit...Stage Left, Xanadu, rush_esl
+Rush, Exit...Stage Left, Free Will, rush_esl
+Rush, Exit...Stage Left, Tom Sawyer, rush_esl
+Rush, Test for Echo, Test for Echo, rush_esl
+Rush, Test for Echo, Driven, rush_tfe
+Rush, Test for Echo, Half the World, rush_tfe
+Rush, Test for Echo, Resist, rush_tfe
+Rush, Test for Echo, The Color of Right, rush_tfe
+Rush, Test for Echo, Time and Motion, rush_tfe
+Rush, Test for Echo, Totem, rush_tfe
+Rush, Test for Echo, Dog Years, rush_tfe
+U2, The Joshua Tree, Where the Streets Have No Name, u2_jt
+U2, The Joshua Tree, I Still Haven't Found What I'm Looking For, u2_jt
+U2, The Joshua Tree, With or Without You, u2_jt
+U2, The Joshua Tree, Bullet the Blue Sky, u2_jt
+U2, The Joshua Tree, In God's Country, u2_jt
+U2, The Joshua Tree, Exit, u2_jt
+U2, Under a Blood Red Sky, Gloria, u2_uabrs
+U2, Under a Blood Red Sky, 11 O'Clock Tick Tock, u2_uabrs
+U2, Under a Blood Red Sky, I Will Follow, u2_uabrs
+U2, Under a Blood Red Sky, Party Girl, u2_uabrs
+U2, Under a Blood Red Sky, Sunday Bloody Sunday, u2_uabrs
+U2, Under a Blood Red Sky, The Electric Co., u2_uabrs
+U2, Under a Blood Red Sky, New Year's Day, u2_uabrs
+U2, Under a Blood Red Sky, 40, u2_uabrs

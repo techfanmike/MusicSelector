@@ -3,6 +3,7 @@ package com.example.android.musicselector;
 import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import java.io.BufferedReader;
@@ -44,10 +45,9 @@ public class MainActivity extends AppCompatActivity {
 
             // read a line until done when null returned
             while ((line = reader.readLine()) != null) {
-
-                // split string and add entry to entry list UI object
                 String[] splitString = line.split(",");
-                mMusicEntryList.add(new MusicListEntry(splitString[0], splitString[1], splitString[2]));
+                mMusicEntryList.add(new MusicListEntry(splitString[0].trim(),
+                        splitString[1].trim(), splitString[2].trim(), splitString[3].trim()));
             }
         } catch (IOException e) {
             ;

@@ -5,38 +5,27 @@
     android:layout_height="match_parent"
     android:orientation="horizontal">
 
-    <TextView
+    <ImageView
+        android:id="@+id/AlbumArt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="album art"
-        android:textSize="15sp"
-        android:textStyle="bold" />
+        android:contentDescription="@string/album_art_description" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/artistName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15sp"
-            android:textSize="15sp"
-            android:textStyle="bold" />
+            style="@style/ArtistTextStyle" />
 
         <TextView
             android:id="@+id/albumName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15sp"
-            android:textSize="12sp" />
+            style="@style/AlbumTextStyle" />
 
         <TextView
             android:id="@+id/song"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15sp"
-            android:textSize="12sp" />
+            style="@style/SongTextStyle" />
     </LinearLayout>
 </LinearLayout>

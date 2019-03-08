@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -24,15 +25,29 @@ public class MusicListEntryAdapter extends ArrayAdapter<MusicListEntry> {
             convertView = inflater.inflate(R.layout.music_list_item_layout, container, false);
         }
 
-        // get the text fields from the layout file
+        // get the resource id for the album art image we will bind to the album art UI element
+        int resourceID = getContext().getResources().getIdentifier(entry.getAlbumArt() , "mipmap",
+                getContext().getPackageName());
+
+        //ImageView albumArt = findViewById(resourceID);
+        //albumArt.setImageResource(resourceID);
+
+        // bind variables to UI objects to set the UI values
         TextView artist = convertView.findViewById(R.id.artistName);
         TextView album = convertView.findViewById(R.id.albumName);
         TextView song = convertView.findViewById(R.id.song);
+        ImageView albumArt = convertView.findViewById(R.id.AlbumArt);
 
-        // set the text fields for the list item
-        artist.setText(entry.getArtist());
-        album.setText(entry.getAlbum());
-        song.setText(entry.getSong());
+        // concatenate string because setText does not like it if you concatenate in the call.
+        String artistString = getContext().getString(R.string.artist_text) + "  " + entry.getArtist();
+        String albumString = getContext().getString(R.string.album_text) + "  " + entry.getAlbum();
+        String songString = getContext().getString(R.string.song_text) + "  " + entry.getSong();
+
+        // set the list item UI objects
+        artist.setText(artistString);
+        album.setText(albumString);
+        song.setText(songString);
+        albumArt.setImageResource(resourceID);
 
         return convertView;
     }
