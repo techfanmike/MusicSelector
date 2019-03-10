@@ -29,10 +29,13 @@ public class PlayerActivity extends AppCompatActivity {
         ImageView playButtonUI = findViewById(R.id.PlayButton);
         ImageView backGroundAlbum = findViewById(R.id.BackgroundView);
 
+        // set the text in the view
         artistUI.setText(artist);
         albumUI.setText(album);
         songUI.setText(song);
         playButtonUI.setImageResource(R.mipmap.play_btn);
+
+        // set a background image and alpha down
         backGroundAlbum.setImageResource(resourceID);
         backGroundAlbum.setImageAlpha(64);
     }
