@@ -5,4 +5,5 @@
     <string name="artist_text">Artist:</string>
     <string name="song_text">Song:</string>
     <string name="play_button_description">Play</string>
+    <string name="background_description">background</string>
 </resources>

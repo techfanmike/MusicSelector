@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("album", entry.getAlbum());
                 intent.putExtra("artist", entry.getArtist());
                 intent.putExtra("song", entry.getSong());
+                intent.putExtra("background", entry.getAlbumArt());
 
                 // kick off the activity
                 startActivity(intent);
