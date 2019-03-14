@@ -4,19 +4,25 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class MusicListEntryAdapter extends ArrayAdapter<MusicListEntry> {
     public MusicListEntryAdapter(Context context, int resource, ArrayList<MusicListEntry> MusicList) {
         super(context, resource, MusicList);
     }
+
+    // inject binding
+    @BindView(R.id.artistName) TextView artist;
+    @BindView(R.id.albumName) TextView album;
+    @BindView(R.id.song) TextView song;
+    @BindView(R.id.AlbumArt) ImageView albumArt;
 
     @Override
     public View getView(int position, View convertView, ViewGroup container) {
@@ -28,15 +34,12 @@ public class MusicListEntryAdapter extends ArrayAdapter<MusicListEntry> {
             convertView = inflater.inflate(R.layout.music_list_item_layout, container, false);
         }
 
+        // call the butterknife binding method
+        ButterKnife.bind(this, convertView);
+
         // get the resource id for the album art image we will bind to the album art UI element
         int resourceID = getContext().getResources().getIdentifier(entry.getAlbumArt() , "mipmap",
                 getContext().getPackageName());
-
-        // bind variables to UI objects to set the UI values
-        TextView artist = convertView.findViewById(R.id.artistName);
-        TextView album = convertView.findViewById(R.id.albumName);
-        TextView song = convertView.findViewById(R.id.song);
-        ImageView albumArt = convertView.findViewById(R.id.AlbumArt);
 
         // concatenate string because setText does not like it if you concatenate in the call.
         String artistString = getContext().getString(R.string.artist_text) + "  " + entry.getArtist();
